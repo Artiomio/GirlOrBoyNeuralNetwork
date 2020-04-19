@@ -1,0 +1,1 @@
+python find_landmarks_female.py >> female_magic_dots

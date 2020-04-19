@@ -1,0 +1,16 @@
+1) Запуск загрузчика фотографий face_db.py
+Он загружает фотографии случайных профилей и сохраняет их в папки o:\faces\female и o:\faces\male
+
+2) Дальше запускаем распознаватель точек лица dlib-а
+python find_landmarks_female.py >> female_magic_dots
+python find_landmarks_male.py >> male_magic_dots
+Он сохраняет волшебные точки в два файла
+
+3) Запускаем convert_landmarks_to_magic_distances.py 
+и создаём два файла с волшебными расстояниями
+
+Их уже может использовать MagicDistancesDataSetReader.java
+В нём (MagicDistancesDataSetReader.java) считанные расстояния можно сериализовать и таким образом ускорить загрузку в ~20 раз.
+
+
+
